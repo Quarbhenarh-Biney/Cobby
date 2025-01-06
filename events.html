@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Okata Ministry int.</title>
+    <title>Events - Okata Ministry int.</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <style type="text/css">
@@ -11,8 +11,8 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-   background: url(1.jpg);
-
+    background: url(1.jpg);
+   font-size: 20px;
 }
 
 header {
@@ -58,6 +58,13 @@ footer {
     width: 100%;
     bottom: 0;
 }
+ footer {
+            background: url(43.jpg);
+            color: #fff;
+            text-align: center;
+            padding: 2em 0;
+            font-size: 1em;
+        }
 
 form {
     display: flex;
@@ -83,65 +90,42 @@ form button {
     cursor: pointer;
     border-radius: 4px;
 }
+section{
+    color: whitesmoke;
+}
 
 form button:hover {
     background-color: #555;
 }
 
-section{
-    color: white;
-}
-footer .social-links a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    display: inline-block;
-}
-footer {
-            background: url(43.jpg);
-            color: #fff;
-            text-align: center;
-            padding: 2em 0;
-            font-size: 1em;
-        }
 </style>
 <body>
     <header>
-        <h1>Contact Us</h1>
+        <h1>Events</h1>
         <nav>
             <ul>
                 <li><a href="Homepage.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="contacts.html">Contact Us</a></li>
-                <li><a href="video.html">Videos</a></li>
+                <li><a href="videos.html">Videos</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <h2>Get in Touch</h2>
-            <form action="submit_form.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Sunday Service - Every Sunday at 10 AM</li>
+                <li>Bible Study - Wednesdays at 7 PM</li>
+                <li>Youth Group - Fridays at 6 PM</li>
+            </ul>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Church Organization. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/TheApostleOkata?mibextid=kFxxJ" target="_blank">Facebook</a>
-        </div>
     </footer>
 </body>
 </html>
