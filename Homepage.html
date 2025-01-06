@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okata Ministry International</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome CDN -->
+    <style type="text/css">
+        /* General Body and Font */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: grey;/*add a color for church background here*/
+        }
+
+        /* Fixed Header Section */
+        header {
+            color: white;
+            padding: 1.2em 0;
+            text-align: center;
+            position: sticky; /* Make header sticky */
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+            background-color: #003366;
+        }
+
+        header img {
+            width: 150px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            font-family: times new roman;
+
+        }
+
+        nav ul li {
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s;
+            padding: 0.5em 1em;
+            display: block;
+        }
+
+        nav ul li a:hover, nav ul li:hover {
+            color: #ffdd57;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('1.jpg') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 4em;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            padding-top: 0px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero a {
+            display: inline-block;
+            background-color: yellow;
+            color: #333;
+            padding: 0.7em 1.5em;
+            border-radius: 1px;
+            text-decoration: revert-layer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .hero a:hover {
+            background-color: blueviolet;
+        }
+
+        /* Marquee */
+        .marquee {
+            background-color: #ffdd57;
+            color: #333;
+            padding: 0.5em 0;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Main Content */
+        main {
+            padding: 4em 1em;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: grey;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            color: white;
+        }
+
+        section {
+            margin-bottom: 4em;
+        }
+
+        h2 {
+            color: white;
+            font-size: 2.5em;
+            border-bottom: 3px solid #ffdd57;
+            display: inline-block;
+            margin-bottom: 1em;
+            padding-bottom: 0.3em;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        /* Event Cards */
+        .event-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5em;
+            
+        }
+
+        .event-card {
+            background-color: #fff;
+            padding: 1.5em;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-image: url(23.jpg);
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            background-image: url(9.jpg);
+        }
+
+        .event-card h3 {
+            color: #003366;
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        .event-card p {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+
+        .event-card a {
+            display: inline-block;
+            background-color: #003366;
+            color: #fff;
+            padding: 0.7em 1.5em;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+
+        }
+
+        .event-card a:hover {
+            background-color: yellow;
+            color: #333;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin-top: 4em;
+            text-align: center;
+            background-image: url(1.jpg);
+        }
+
+        .video-section iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: url(43.jpg);
+            color: #fff;
+            text-align: center;
+            padding: 2em 0;
+            font-size: 1em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .social-links {
+            margin-top: 1em;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 2.5em;
+            margin: 0 1em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffdd57;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="church logo.png" alt="Okata Ministry Logo">
+        <h1>Okata Ministry International</h1>
+        <nav>
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="video.html">Videos</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div>
+            <h2>Experience the Power of Faith</h2>
+            <p>Join us for worship and fellowship</p>
+            <p> Building faith, spreading love, and sharing hope.</p>
+            <a href="#">Get in Touch</a>
+        </div>
+    </div>
+
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left">Join us for our Gifting Service every Sunday at 9 AM - Bringing salvation to all in Jesus' name!</marquee>
+    </div>
+
+    <main>
+        <section>
+            <h2>Our Mission</h2>
+            <p>To spread love, faith, and hope throughout our community and beyond. We aim to build a family united in Christ's love.</p>
+        </section>
+
+        <section>
+            <h2>Upcoming Events</h2>
+            <div class="event-cards">
+                <div class="event-card">
+                    <h3>Sunday Service</h3>
+                    <p>Every Sunday at 9 AM</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="event-card">
+                    <h3>Word on Wednesday (WOW)</h3>
+                    <p>Wednesdays at 6:30 PM</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="event-card">
+                    <h3>Apostolic Service</h3>
+                    <p>Fridays at 6:30 PM</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2>Watch Our Latest Sermon</h2>
+            <iframe src="https://www.youtube.com/embed/6kA7281dSko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Okata Ministry International. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com" class="fab fa-facebook"></a>
+            <a href="https://www.twitter.com" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com" class="fab fa-instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
